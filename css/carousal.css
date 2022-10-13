@@ -1,0 +1,82 @@
+#carousal {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--font-color);
+}
+
+#carousal .slide {
+  display: none;
+  margin-top: 6rem;
+  width: 100vw;
+  height: calc(100vh - 6rem);
+  background-position: center;
+  background-size: cover;
+}
+
+#carousal .slide.active {
+  display: block;
+  animation: fade-in 1s ease forwards;
+}
+
+#carousal .slide .slide--inner {
+  position: absolute;
+  top: 50%;
+  left: 20rem;
+  width: 20rem;
+  transform: translateY(-40%);
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--white-color);
+}
+
+#carousal .slide.active .slide--inner {
+  animation: fade-in-from-left 0.5s ease forwards;
+}
+
+#carousal--btn-wrap #prev,
+#carousal--btn-wrap #next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 6rem;
+  height: 6rem;
+  margin: 3rem;
+  color: var(--white-color);
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+}
+
+#carousal--btn-wrap #prev:hover,
+#carousal--btn-wrap #next:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#carousal--btn-wrap #prev {
+  left: 0;
+}
+
+#carousal--btn-wrap #next {
+  right: 0;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-from-left {
+  from {
+    opacity: 0;
+    left: 25rem;
+  }
+  to {
+    opacity: 1;
+    left: 20rem;
+  }
+}

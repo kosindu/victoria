@@ -1,0 +1,44 @@
+.container {
+  max-width: 128rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.p--l {
+  padding: 3rem;
+}
+
+.p_vertical--l {
+  padding: 6rem 0;
+}
+
+.p_vertical--m {
+  padding: 2rem 0;
+}
+
+.heading--l {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.heading--m {
+  font-size: 2rem;
+}
+
+.card {
+  flex: 1;
+  border-radius: 0.5rem;
+}
+
+.card_img {
+  width: 100%;
+}
+
+.card_img img {
+  border-radius: 0.5rem;
+}
+
+.bg-dark {
+  background-color: var(--font-color);
+  color: var(--white-color);
+}

@@ -1,0 +1,71 @@
+:root {
+  font-size: 10px;
+  --main-color: #388e3c;
+  --main-color--light: #4caf50;
+  --font-color: #212121;
+  --background-color: #c8e6c9;
+  --shadow-color: #757575;
+  --white-color: #fff;
+}
+
+.theme-color {
+  color: var(--main-color);
+}
+
+.main_btn {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  background-color: var(--main-color--light);
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--white-color);
+  box-shadow: 0.1rem 0.1rem 0 var(--shadow-color);
+}
+
+.main_btn:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0.4rem 0.4rem 0 var(--shadow-color);
+}
+
+.main_nav {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  background-color: var(--background-color);
+  box-shadow: 0 0.1rem 0.1rem var(--shadow-color);
+}
+
+.main_nav--inner {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main_nav--links ul {
+  display: flex;
+}
+
+.main_nav--links ul li {
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+}
+
+.main_nav--links ul li a {
+  display: block;
+  padding: 0.5rem 2rem;
+}
+
+.main_nav--links ul li.active,
+.main_nav--links ul li:hover {
+  background-color: #fff;
+}
+
+.main_nav--links ul li.active {
+  box-shadow: 0.1rem 0.1rem 0.1rem var(--shadow-color);
+}
+
+.inner {
+  display: flex;
+  gap: 3rem;
+}
